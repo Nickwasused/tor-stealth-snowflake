@@ -1,12 +1,14 @@
 @charset "utf-8";
 
-hidden {
+.hidden {
 	visibility : hidden;
+	height     : 0px;
+	width      : 0px;
 }
 
 /* If you want the Snowflake to be visible use this: */
 /*
-hidden {
+.hidden {
 	visibility : visible;
 }
 *\
