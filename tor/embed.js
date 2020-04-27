@@ -982,7 +982,6 @@ class BadgeUI extends UI {
     this.popup.setEnabled(false);
     this.popup.setActive(false);
     this.popup.setStatusText(messages.getMessage('popupStatusOff'));
-    this.setIcon('off');
     this.popup.setStatusDesc(missing, true);
     this.popup.hideButton();
   }
@@ -992,10 +991,8 @@ class BadgeUI extends UI {
     this.popup.setChecked(true);
     if (clients > 0) {
       this.popup.setStatusText(messages.getMessage('popupStatusOn', String(clients)));
-      this.setIcon('running');
     } else {
       this.popup.setStatusText(messages.getMessage('popupStatusReady'));
-      this.setIcon('on');
     }
     // FIXME: Share stats from webext
     this.popup.setStatusDesc('');
@@ -1006,7 +1003,6 @@ class BadgeUI extends UI {
   turnOff() {
     this.popup.setChecked(false);
     this.popup.setStatusText(messages.getMessage('popupStatusOff'));
-    this.setIcon('off');
     this.popup.setStatusDesc('');
     this.popup.setEnabled(false);
     this.popup.setActive(false);
@@ -1017,9 +1013,6 @@ class BadgeUI extends UI {
     this.turnOn();
   }
 
-  setIcon(status) {
-    document.getElementById('icon').href = `tor/assets/toolbar-${status}.ico`;
-  }
 
 }
 
