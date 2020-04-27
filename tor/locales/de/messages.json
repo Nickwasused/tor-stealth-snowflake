@@ -1,0 +1,80 @@
+{
+  "appDesc": {
+    "message": "Snowflake ist ein auf WebRTC basierendes \"pluggable transport\"-Protokoll für Tor."
+  },
+  "popupEnabled": {
+    "message": "Aktiv"
+  },
+  "popupLearnMore": {
+    "message": "Mehr erfahren"
+  },
+  "popupStatusOff": {
+    "message": "Snowflake ist ausgeschaltet"
+  },
+  "popupStatusOn": {
+    "message": "Anzahl der derzeit verbundenen Benutzer: $1"
+  },
+  "popupStatusReady": {
+    "message": "Dein Snowflake ist bereit, Benutzern zu helfen, die Zensur zu umgehen."
+  },
+  "popupWebRTCOff": {
+    "message": "WebRTC-Fähigkeit nicht erkannt."
+  },
+  "popupBridgeUnreachable": {
+    "message": "Konnte keine Verbindung zur Brücke herstellen."
+  },
+  "popupDescOn": {
+    "message": "Anzahl der Benutzer, denen dein Snowflake in den letzten 24 Stunden geholfen hat, die Zensur zu umgehen: $1"
+  },
+  "badgeCookiesOff": {
+    "message": "Cookies sind nicht aktiviert."
+  },
+  "websiteIntro": {
+    "message": "Snowflake ist ein System zur Umgehung von Internetzensur. Personen die Zensur ausgesetzt sind, können Snowflake verwenden, um auf das Internet zuzugreifen. Deren Verbindung läuft über Snowflake Proxies, welche von Freiwilligen betrieben werden. Für mehr Informationen zu Snowflake, besuchen Sie bitte das <a href=\"https://trac.torproject.org/projects/tor/wiki/doc/Snowflake/\" data-msgid=\"__MSG_docWiki__\">Dokumentations-Wiki</a>."
+  },
+  "docWiki": {
+    "message": "Wiki-Dokumentation"
+  },
+  "browser": {
+    "message": "Browser"
+  },
+  "censoredUsers": {
+    "message": "Falls Ihr Internetzugang zensiert ist, laden Sie den <a href=\"https://www.torproject.org/download/\">Tor Browser</a> herunter."
+  },
+  "extension": {
+    "message": "Erweiterung"
+  },
+  "installExtension": {
+    "message": "Falls Ihr Internetzugang <strong>nicht</strong> zensiert ist, ziehen Sie in Erwägung, Snowflake zu installieren, um Nutzern in zensierten Netzwerken zu helfen. Sie brauchen sich keine Sorgen zu machen über die  Webseiten, auf die die Nutzer über Ihren Proxy zugreifen. Deren sichtbare IP-Adresse entspricht der des Tor Ausgangsknotenpunktes und nicht Ihrer."
+  },
+  "installFirefox": {
+    "message": "In Firefox installieren"
+  },
+  "installChrome": {
+    "message": "In Chrome installieren"
+  },
+  "reportingBugs": {
+    "message": "Fehler werden gemeldet"
+  },
+  "fileBug": {
+    "message": "Sollten Probleme bei der Verwendung von Snowflake als Nutzer oder Proxy auftauchen, bitten wir Sie, den Fehler zu melden.  Um das zu tun, müssen Sie:"
+  },
+  "sharedAccount": {
+    "message": "Entweder <a href=\"https://trac.torproject.org/projects/tor/register\">ein Benutzerkonto erstellen</a> oder <a href=\"https://trac.torproject.org/projects/tor/login\">sich anmelden</a> mit dem öffentlichen <b>cypherpunks</b> Konto und dem Passwort <b>writecode</b>."
+  },
+  "bugTracker": {
+    "message": "<a href=\"https://trac.torproject.org/projects/tor/newticket?component=Circumvention%2FSnowflake\">Erstelle ein Ticket</a> mithilfe unseres Bug Trackers."
+  },
+  "descriptive": {
+    "message": "Bitte versuchen Sie, Ihr Problem genau beschreiben und, falls möglich, die Log-Nachrichten mitzuschicken, um uns zu helfen, den Fehler zu reproduzieren. Erwägen Sie, die Schlüsselwörter <em>snowflake-webextension</em> oder <em>snowflake-client</em> hinzuzufügen, um uns zu informieren welcher Teil des Snowflake-Systems den Fehler aufweist."
+  },
+  "embed": {
+    "message": "Einbetten"
+  },
+  "possible": {
+    "message": "Es ist nun möglich, den Snowflake-Banner auf jeder Webseite einzubetten:"
+  },
+  "looksLike": {
+    "message": "Dieser sieht folgendermaßen aus:"
+  }
+}
