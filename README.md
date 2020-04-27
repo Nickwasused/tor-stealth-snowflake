@@ -3,7 +3,7 @@ Enable the Tor Snowflake without user Input.
 
 # Setup
 ## Quick Way
-<code> <iframe src="https://nickwasused.github.io/tor-stealth-snowflake/" frameborder="0" height="0" width="0" "> </code>
+<code> <iframe src="https://nickwasused.github.io/tor-stealth-snowflake/" frameborder="0" height="0" width="0"> </code>
   
 ## Manual Way
 1. Download the tor folder
