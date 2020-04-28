@@ -1,15 +1,3 @@
-# tor-stealth-snowflake
-Enable the Tor Snowflake without user Input.
-
-# Setup
-## Quick Way
-<code><script src="https://nickwasused.github.io/tor-stealth-snowflake/proxy-compressed.js"></script></code>
-  
-## Manual Way
-Add this Script to your html file
-
-```
-<script>
 const availableLangs = new Set([
   'bn_BD',
   'ca',
@@ -1116,5 +1104,3 @@ var debug, snowflake, config, broker, ui, log, dbg, init, update, silenceNotific
   }
 
 }());
-</script>
-```
