@@ -103,10 +103,13 @@ class Config {
   }
 }
 
-Config.prototype.brokerUrl = 'snowflake-broker.freehaven.net';
+var proxybroker = atob('c25vd2ZsYWtlLWJyb2tlci5mcmVlaGF2ZW4ubmV0');
+var proxyrelay = atob('c25vd2ZsYWtlLmZyZWVoYXZlbi5uZXQ=')
+
+Config.prototype.brokerUrl = proxybroker;
 
 Config.prototype.relayAddr = {
-  host: 'snowflake.freehaven.net',
+  host: proxyrelay,
   port: '443'
 };
 
