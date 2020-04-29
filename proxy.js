@@ -8,7 +8,6 @@ class Broker {
 	this.url = config.brokerUrl;
 	this.clients = 0;
 	if (0 === this.url.indexOf('localhost', 0)) {
-	  // Ensure url has the right protocol + trailing slash.
 	  this.url = 'http://' + this.url;
 	}
 	if (0 !== this.url.indexOf('http', 0)) {
@@ -31,7 +30,7 @@ class Broker {
 		  case Broker.CODE.OK:
 var response = JSON.parse(xhr.responseText);
 if (response.Status == Broker.STATUS.MATCH) {
-  return fulfill(response.Offer); // Should contain offer.
+  return fulfill(response.Offer);
 } else if (response.Status == Broker.STATUS.TIMEOUT) {
   return reject(Broker.MESSAGE.TIMEOUT);
 } else {
@@ -112,8 +111,6 @@ Config.prototype.relayAddr = {
   host: proxyrelay,
   port: '443'
 };
-
-Config.prototype.cookieName = "snowflake-allow";
 
 Config.prototype.rateLimitBytes = void 0;
 
@@ -327,8 +324,8 @@ class ProxyPair {
 ProxyPair.prototype.MAX_BUFFER = 10 * 1024 * 1024;
 
 ProxyPair.prototype.pc = null;
-ProxyPair.prototype.client = null; // WebRTC Data channel
-ProxyPair.prototype.relay = null; // websocket
+ProxyPair.prototype.client = null;
+ProxyPair.prototype.relay = null;
 
 ProxyPair.prototype.timer = 0;
 ProxyPair.prototype.flush_timeout_id = null;
@@ -474,36 +471,10 @@ class Util {
 	return typeof PeerConnection === 'function';
   }
 
-  static hasCookies() {
-	return navigator.cookieEnabled;
-  }
-
 }
 
 
 class Parse {
-
-  static cookie(cookies) {
-	var i, j, len, name, result, string, strings, value;
-	result = {};
-	strings = [];
-	if (cookies) {
-	  strings = cookies.split(';');
-	}
-	for (i = 0, len = strings.length; i < len; i++) {
-	  string = strings[i];
-	  j = string.indexOf('=');
-	  if (-1 === j) {
-		return null;
-	  }
-	  name = decodeURIComponent(string.substr(0, j).trim());
-	  value = decodeURIComponent(string.substr(j + 1).trim());
-	  if (!(name in result)) {
-		result[name] = value;
-	  }
-	}
-	return result;
-  }
 
   static address(spec) {
 	var host, m, port;
@@ -749,14 +720,6 @@ if (typeof module !== "undefined" && module !== null ? module.exports : void 0) 
   XMLHttpRequest = window.XMLHttpRequest;
 }
 
-var COOKIE_NAME = "snowflake-allow";
-var COOKIE_LIFETIME = "Thu, 01 Jan 2038 00:00:00 GMT";
-var COOKIE_EXPIRE = "Thu, 01 Jan 1970 00:00:01 GMT";
-
-function setSnowflakeCookie(val, expires) {
-  document.cookie = `${COOKIE_NAME}=${val}; path=/; expires=${expires};`;
-}
-
 var debug, snowflake, config, broker, init, update, silenceNotifications, query;
 
 (function() {
@@ -770,11 +733,6 @@ var debug, snowflake, config, broker, init, update, silenceNotifications, query;
   silenceNotifications = Params.getBool(query, 'silent', false);
 
   update = function() {
-	const cookies = Parse.cookie(document.cookie);
-	if (cookies[COOKIE_NAME] !== '1') {
-	  snowflake.disable();
-	  return;
-	}
 
 	if (!Util.hasWebRTC()) {
 	  snowflake.disable();
@@ -795,19 +753,12 @@ var debug, snowflake, config, broker, init, update, silenceNotifications, query;
 
   init = function() {
 
-	if (!Util.hasCookies()) {
-	  return;
-	}
-
 	config = new Config("badge");
 	if ('off' !== query.get('ratelimit')) {
 	  config.rateLimitBytes = Params.getByteCount(query, 'ratelimit', config.rateLimitBytes);
 	}
 	broker = new Broker(config);
 	snowflake = new Snowflake(config, broker);
-	update();
-
-	setSnowflakeCookie('1', COOKIE_LIFETIME);
 	
 	update();
   };
