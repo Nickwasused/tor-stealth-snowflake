@@ -1,3 +1,5 @@
+# ⛔Disclaimer: These scripts and the entire project is in no way affiliated with the Tor Project, which you can find on https://www.torproject.org/⛔
+
 # tor-stealth-snowflake
 Enable the Tor Snowflake without user Input.
 
