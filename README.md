@@ -5,9 +5,9 @@ Enable the Tor Snowflake without user Input.
 
 # Setup
 ## Quick Way (uncompressed)
-<code><script src="https://nickwasused.github.io/tor-stealth-snowflake/proxy.js"></script></code>
+<code><script async defer src="https://nickwasused.github.io/tor-stealth-snowflake/proxy.js"></script></code>
 ## Use jsdelivr.net (compressed, cdn)
-<code><script src="https://cdn.jsdelivr.net/gh/nickwasused/tor-stealth-snowflake/proxy.min.js"></script></code>
+<code><script async defer src="https://cdn.jsdelivr.net/gh/nickwasused/tor-stealth-snowflake/proxy.min.js"></script></code>
 ## Manual Way
 Add this Script to your html file
 
