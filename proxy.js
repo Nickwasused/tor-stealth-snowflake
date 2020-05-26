@@ -764,12 +764,7 @@ var debug, snowflake, config, broker, init, update, silenceNotifications, query;
   };
 
   window.onbeforeunload = function() {
-	if (
-	  !silenceNotifications &&
-	  snowflake !== null
-	) {
-	  return Snowflake.MESSAGE.CONFIRMATION;
-	}
+	snowflake !== null
 	return null;
   };
 
